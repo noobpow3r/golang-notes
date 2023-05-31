@@ -26,9 +26,30 @@ func (m MongoDBNumberStore) Put(number int) error {
 	return nil
 }
 
+type PostgresNumberStore struct {
+	// fill
+}
+
+func (s PostgresNumberStore) GetAll() ([]int, error) {
+	return []int{1, 2, 3, 4, 5}, nil
+}
+
+func (m PostgresNumberStore) Put(number int) error {
+	fmt.Println("store the number into the postgres storage")
+	return nil
+}
+
 func main() {
+	// apiServer := ApiServer{
+	// 	numberStore: MongoDBNumberStore{},
+	// }
+
 	apiServer := ApiServer{
-		numberStore: MongoDBNumberStore{},
+		numberStore: PostgresNumberStore{},
+	}
+
+	if err := apiServer.numberStore.Put(1); err != nil {
+		panic(err)
 	}
 
 	numbers, err := apiServer.numberStore.GetAll()
