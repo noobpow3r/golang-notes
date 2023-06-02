@@ -1,16 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"myproject/types"
+	"myproject/util"
+)
 
 // Init module: go mod init <package_name>
 // Command to build: go build -o <file_name>
 
 func main() {
-	number := getNumber()
-  user := User{
-    username: "Bruce",
-    age: getNumber(),
-  }
-	fmt.Println("the number is:", number)
-	fmt.Println("the user is:", user)
+	user := types.User{
+		Username: util.GetUsername(),
+		Age:      util.GetAge(),
+	}
+	fmt.Printf("the user is %v:\n", user)
+	fmt.Printf("the user is %+v:", user)
 }
