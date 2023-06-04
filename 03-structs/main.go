@@ -22,11 +22,16 @@ type Entity struct {
 	name    string
 	id      string
 	version string
+	Position
 }
 
 type SpecialEntity struct {
 	specialField float64
 	Entity
+}
+
+type Position struct {
+	x, y int
 }
 
 func main() {
@@ -57,6 +62,10 @@ func main() {
 			name:    "Thors",
 			id:      "245",
 			version: "2.0",
+			Position: Position{
+				x: 300,
+				y: 400,
+			},
 		},
 	}
 
@@ -66,5 +75,8 @@ func main() {
 	fmt.Printf("Entity name is: %+v\n", se.name)
 	fmt.Printf("Entity id is: %+v\n", se.id)
 	fmt.Printf("Entity version is: %+v\n", se.version)
+	fmt.Printf("Entity position is: %+v\n", se.Position)
+	fmt.Printf("Entity position x is: %+v\n", se.x)
+	fmt.Printf("Entity position y is: %+v\n", se.y)
 
 }
