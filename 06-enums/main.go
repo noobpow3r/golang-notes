@@ -64,6 +64,42 @@ func getQuakeDamage(weaponType WeaponType) int {
 // 	}
 // }
 
+type Color int
+
+type Position struct {
+	x, y int
+}
+
+type Player struct {
+	Position
+}
+
+const (
+	ColorBlue Color = iota
+	ColorBlack
+	ColorYellow
+	ColorPink
+)
+
+func (c Color) String() string {
+	switch c {
+	case ColorBlue:
+		return "BLUE"
+	case ColorBlack:
+		return "BLACK"
+	case ColorYellow:
+		return "YELLOW"
+	case ColorPink:
+		return "PINK"
+	default:
+		panic("invalid color given")
+	}
+}
+
+func (p Position) Move(val int) {
+	fmt.Println("The position is moved by:", val)
+}
+
 func main() {
 	// fmt.Println("damage of weapon:", getQuakeDamage("rocket"))
 	// fmt.Println("damage of weapon:", getQuakeDamage(Rocket))
@@ -77,4 +113,9 @@ func main() {
 	fmt.Printf("damage of weapon (%s) (%d):\n", Lightning, getQuakeDamage(Lightning))
 	fmt.Printf("damage of weapon (%s) (%d):\n", Rocket, getQuakeDamage(Rocket))
 	fmt.Printf("damage of weapon (%s) (%d):\n", Gauntlet, getQuakeDamage(Gauntlet))
+
+	p := Player{}
+	p.Move(100)
+	fmt.Println("the color is:", ColorBlack)
+
 }
