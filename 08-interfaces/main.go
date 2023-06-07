@@ -41,7 +41,12 @@ func (m PostgresNumberStore) Put(number int) error {
 
 // Second Example Advanced interface
 type Storage interface {
+	Putter
 	Get(id int) (any, error)
+	// Put(id int, val any) error
+}
+
+type Putter interface {
 	Put(id int, val any) error
 }
 
@@ -59,9 +64,26 @@ func (s FooStorage) Put(id int, val any) error {
 	return nil
 }
 
-func updateValue(id int, val any) error {
-	store := FooStorage{}
-	return store.Put(id, val)
+func updateValue(id int, val any, p Putter) error {
+	// store := FooStorage{}
+	// return store.Put(id, val)
+	return p.Put(id, val)
+}
+
+type SimplePutter struct{}
+
+func (s SimplePutter) Put(id int, val any) error {
+	return nil
+}
+
+type BarStorage struct{}
+
+func (s BarStorage) Get(id int) (any, error) {
+	return nil, nil
+}
+
+func (s BarStorage) Put(id int, val any) error {
+	return nil
 }
 
 func main() {
@@ -91,5 +113,8 @@ func main() {
 	}
 	s.store.Get(1)
 	s.store.Put(1, "foo")
+
+	sputter := SimplePutter{}
+	updateValue(1, "bar", sputter)
 
 }
