@@ -11,19 +11,32 @@ func fetchResource() string {
 }
 
 func main() {
-	// 1 unbuffered channel
-	// 2 buffered channel
-	resultch := make(chan string) // -> unbuffered channel
-	// resultch <- " foo" // -> is no FULL -> IT WILL BLOCK -> BLOCK HERE
+	msgch := make(chan string, 128)
+	msgch <- "A"
+	msgch <- "B"
+	msgch <- "C"
+	close(msgch)
 
-	// go fetchResource() // async
+	// msg := <-msgch
+	// fmt.Println("the msg is:", msg)
+	// msg = <-msgch
+	// fmt.Println("the msg is:", msg)
+	// msg = <-msgch
+	// fmt.Println("the msg is:", msg)
 
-	// async
-	go func() {
-		result := <-resultch
-		fmt.Println(result)
-	}()
+	// for {
+	// 	msg, ok := <-msgch
+	// 	if !ok {
+	// 		break
+	// 	}
+	// 	fmt.Println("the message -> ", msg)
+	// }
 
-	resultch <- "foo"
+	// This piece of code is our consumer
+	for msg := range msgch {
+		fmt.Println("the message -> ", msg)
+	}
+
+	fmt.Println("reading all message from the channel")
 
 }
