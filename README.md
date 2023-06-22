@@ -1,6 +1,6 @@
 # Golang Notes
 
-## Table of Contents
+# Table of Contents
 
 - [Concurrency](#concurrency)
   - [Range and Close](#range-and-close)
