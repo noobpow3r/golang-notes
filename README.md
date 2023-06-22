@@ -2,8 +2,8 @@
 
 ## Table of Contents
 
-* [Concurrency]
- * [Range and Close]
+- [Concurrency](#concurrency)
+  - [Range and Close](#range-and-close)
 
 # Concurrency
 
