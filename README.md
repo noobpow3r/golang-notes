@@ -1,8 +1,13 @@
 # Golang Notes
 
+## Table of Contents
+
+* [Concurrency]
+ * [Range and Close]
+
 # Concurrency
 
-##  Range and Close
+## Range and Close
 
 A sender can `close` a channel to indicate that no more values will be sent. Receivers can test whether a channel has been closed by assigning a second parameter to the receive expression: after
 
