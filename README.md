@@ -20,3 +20,5 @@ The loop `for i := range c` receives values from the channel repeatedly until it
 Only the sender should close a channel, never the receiver. Sending on a closed channel will cause a panic.
 
 Channels aren't like files; you don't usually need to close them. Closing is only necessary when the receiver must be told there are no more values coming, such as to terminate a range loop.
+
+[Code Example](14-concurrency/04-range-and-close/main.go)
