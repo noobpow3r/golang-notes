@@ -30,3 +30,19 @@ The `select` statement lets a goroutine wait on multiple communication operation
 A `select` blocks until one of its cases can run, the it executes that case. It chooses one at random if multiple are ready.
 
 [Code Example](14-concurrency/05-select/main.go)
+
+## Default Selection
+
+The `default` case in a `select` is run if no other case is ready.
+
+Use a `default` case to try a send or receive without blocking:
+
+```go
+select {
+case i := <-c:
+    // use i
+default:
+    // receiving from c would block
+}
+```
+[Code Example](14-concurrency/06-default-selection/main.go)
