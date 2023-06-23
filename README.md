@@ -22,3 +22,9 @@ Only the sender should close a channel, never the receiver. Sending on a closed 
 Channels aren't like files; you don't usually need to close them. Closing is only necessary when the receiver must be told there are no more values coming, such as to terminate a range loop.
 
 [Code Example](14-concurrency/04-range-and-close/main.go)
+
+## Select
+
+The `select` statement lets a goroutine wait on multiple communication operations.
+
+A `select` blocks until one of its cases can run, the it executes that case. It chooses one at random if multiple are ready.
