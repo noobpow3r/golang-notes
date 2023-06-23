@@ -28,3 +28,5 @@ Channels aren't like files; you don't usually need to close them. Closing is onl
 The `select` statement lets a goroutine wait on multiple communication operations.
 
 A `select` blocks until one of its cases can run, the it executes that case. It chooses one at random if multiple are ready.
+
+[Code Example](14-concurrency/05-select/main.go)
