@@ -65,4 +65,4 @@ We can define a block of code to be executed in mutual exclusion by surrounding 
 
 We can also use `defer` to ensure the mutex will be unlocked as in the `Value` method.
 
-[Code Example]()
+[Code Example](14-concurrency/07-sync-mutex/main.go)
