@@ -20,6 +20,8 @@ The receiver appears in its own argument list between the `func` keyword and the
 
 In this example, the `Abs` method has a receiver of type `Vertex` named `v`.
 
+[Code Example](15-methods-and-interfaces/01-methods/main.go)
+
 # Concurrency
 
 ## Range and Close
