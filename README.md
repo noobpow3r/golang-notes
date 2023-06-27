@@ -6,7 +6,7 @@
   - [Range and Close](#range-and-close)
   - [Select](#select)
   - [Default Selection](#default-selection)
-  - [sync.Mutex](#sync.mutex)
+  - [sync Mutex](#sync-mutex)
 
 # Concurrency
 
@@ -51,7 +51,7 @@ default:
 
 [Code Example](14-concurrency/06-default-selection/main.go)
 
-## sync.Mutex
+## sync Mutex
 
 We've seen how channels are great for communication among goroutines.
 
