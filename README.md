@@ -4,6 +4,9 @@
 
 - [Concurrency](#concurrency)
   - [Range and Close](#range-and-close)
+  - [Select](#select)
+  - [Default Selection](#default-selection)
+  - [sync.Mutex](#sync-mutex)
 
 # Concurrency
 
