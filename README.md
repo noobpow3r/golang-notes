@@ -22,6 +22,12 @@ In this example, the `Abs` method has a receiver of type `Vertex` named `v`.
 
 [Code Example](15-methods-and-interfaces/01-methods/main.go)
 
+## Methods are functions
+
+A method is just a function with a receiver argument.
+
+Here's `Abs` written as a regular function with no change in functionality.
+
 # Concurrency
 
 ## Range and Close
