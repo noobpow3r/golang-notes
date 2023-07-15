@@ -1,5 +1,12 @@
 # Golang Notes
 
+This notes come from 2 courses:
+
+- [A Tour of Go](https://go.dev/tour)
+- [Fulltimegodev](https://fulltimegodev.com/)
+
+Thanks to Golang Team and AnthonyGG for let me learn this awesome language, all credits for them.
+
 # Table of Contents
 
 - [Concurrency](#concurrency)
