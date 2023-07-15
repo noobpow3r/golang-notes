@@ -52,6 +52,8 @@ Try removing the `*` from the declaration of the `Scale` function on line 16 and
 
 With a value receiver, the `Scale` method operates on a copy of the original `Vertex` value. (This is the same behavior as for any other function argument). The `Scale` method must have a pointer receiver to change the `Vertex` value declared in the `main` function.
 
+[Code Example](15-methods-and-interfaces/04-pointer-receivers/main.go)
+
 # Concurrency
 
 ## Range and Close
