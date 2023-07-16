@@ -9,6 +9,12 @@ Thanks to Golang Team and AnthonyGG for let me learn this awesome language, all 
 
 # Table of Contents
 
+- [Methods and Interfaces](#methods-and-interfaces)
+  - [Methods](#methods)
+  - [Methods are functions](#methods-are-functions)
+  - [Methods continued](#methods-continued)
+  - [Pointer receivers](#pointer-receivers)
+  - [Pointers and functions](#pointers-and-functions)
 - [Concurrency](#concurrency)
   - [Range and Close](#range-and-close)
   - [Select](#select)
