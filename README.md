@@ -61,6 +61,14 @@ With a value receiver, the `Scale` method operates on a copy of the original `Ve
 
 [Code Example](15-methods-and-interfaces/04-pointer-receivers/main.go)
 
+## Pointers and functions
+
+Here we see the `Abs` and `Scale` methods rewritten as functions.
+
+Again, try removing the `*` from line 16. Can you see why the behavior changes? What else did you need to change for the example to compile?
+
+[Code Example](15-methods-and-interfaces/05-pointers-and-functions/main.go)
+
 # Concurrency
 
 ## Range and Close
