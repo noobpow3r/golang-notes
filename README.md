@@ -15,6 +15,8 @@ Thanks to Golang Team and AnthonyGG for let me learn this awesome language, all 
   - [Methods continued](#methods-continued)
   - [Pointer receivers](#pointer-receivers)
   - [Pointers and functions](#pointers-and-functions)
+  - [Methods and pointer indirection](#methods-and-pointer-indirection)
+  - [Methods and pointer indirection 2](#methods-and-pointer-indirection-2)
 - [Concurrency](#concurrency)
   - [Range and Close](#range-and-close)
   - [Select](#select)
@@ -95,6 +97,29 @@ p.Scale(10) // OK
 ```
 
 For the statement `v.Scale(5)`, even though `v` is a value and not a pointer, the method with the pointer receiver is called automatically. That is, as a convenience, Go interprets the statement `v.Scale(5)` as `(&v).Scale(5)` since the `Scale` method has a pointer receiver.
+
+## Methods and pointer indirection 2
+
+The equivalent thing happens in the reverse direction.
+
+Functions that take a value argument must take a value of that specific type:
+
+```go
+var v Vertex
+fmt.Println(AbsFunc(v))  // OK
+fmt.Println(AbsFunc(&v)) // Compile error!
+```
+
+while methods with value receivers take either a value or a pointer as the receiver when they are called:
+
+```go
+var v Vertex
+fmt.Println(v.Abs()) // OK
+p := &v
+fmt.Println(p.Abs()) // OK
+```
+
+In this case, the method call `p.Abs()` is interpreted as `(*p).Abs()`
 
 # Concurrency
 
