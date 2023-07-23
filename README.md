@@ -17,6 +17,8 @@ Thanks to Golang Team and AnthonyGG for let me learn this awesome language, all 
   - [Pointers and functions](#pointers-and-functions)
   - [Methods and pointer indirection](#methods-and-pointer-indirection)
   - [Methods and pointer indirection 2](#methods-and-pointer-indirection-2)
+  - [Choosing a value or pointer receiver](#choosing-a-value-or-pointer-receiver)
+  - [Interfaces](#interfaces)
 - [Concurrency](#concurrency)
   - [Range and Close](#range-and-close)
   - [Select](#select)
