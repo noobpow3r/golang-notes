@@ -121,6 +121,26 @@ fmt.Println(p.Abs()) // OK
 
 In this case, the method call `p.Abs()` is interpreted as `(*p).Abs()`
 
+## Choosing a value or pointer receiver
+
+There are two reasons to use a pointer receiver.
+
+The first is so that the method can modify the value that its receiver points to.
+
+The second is to avoid copying the value on each method call. This can be more efficient if the receiver is a large struct, for example.
+
+In this example, both `Scale` and `Abs` are methods with receiver type `*Vertex`, even though the `Abs` method needn't modify its receiver.
+
+In general, all methods on a given type should have either value or pointer receivers, but not a mixture of both. (We'll see why over the next few pages.)
+
+## Interfaces
+
+An interface type is defined as a set of method signatures.
+
+A value of interface type can hold any value that implements those methods.
+
+**Note:** There is an error in the example code on line 23. `Vertex` (the value type) doesn't implement `Abser` because the `Abs` method is defined only on `*Vertex` (the pointer type).
+
 # Concurrency
 
 ## Range and Close
