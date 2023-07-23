@@ -25,6 +25,10 @@ func main() {
 	p.Scale(3)
 	ScaleFunc(p, 8)
 
-	fmt.Println(v, p)
+	q := &Vertex{3, 4}
+	q.Scale(2)
+	ScaleFunc(q, 10)
+
+	fmt.Println(v, p, q)
 
 }
