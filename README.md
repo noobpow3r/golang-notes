@@ -98,6 +98,8 @@ p.Scale(10) // OK
 
 For the statement `v.Scale(5)`, even though `v` is a value and not a pointer, the method with the pointer receiver is called automatically. That is, as a convenience, Go interprets the statement `v.Scale(5)` as `(&v).Scale(5)` since the `Scale` method has a pointer receiver.
 
+[Code Example](15-methods-and-interfaces/06-methods-and-pointer-indirection/main.go)
+
 ## Methods and pointer indirection 2
 
 The equivalent thing happens in the reverse direction.
@@ -121,6 +123,8 @@ fmt.Println(p.Abs()) // OK
 
 In this case, the method call `p.Abs()` is interpreted as `(*p).Abs()`
 
+[Code Example](15-methods-and-interfaces/07-methods-and-pointer-indirection-2/main.go)
+
 ## Choosing a value or pointer receiver
 
 There are two reasons to use a pointer receiver.
@@ -133,6 +137,8 @@ In this example, both `Scale` and `Abs` are methods with receiver type `*Vertex`
 
 In general, all methods on a given type should have either value or pointer receivers, but not a mixture of both. (We'll see why over the next few pages.)
 
+[Code Example](15-methods-and-interfaces/08-choosing-a-value-or-pointer-receiver/main.go)
+
 ## Interfaces
 
 An interface type is defined as a set of method signatures.
@@ -140,6 +146,8 @@ An interface type is defined as a set of method signatures.
 A value of interface type can hold any value that implements those methods.
 
 **Note:** There is an error in the example code on line 23. `Vertex` (the value type) doesn't implement `Abser` because the `Abs` method is defined only on `*Vertex` (the pointer type).
+
+[Code Example](15-methods-and-interfaces/09-interfaces/main.go)
 
 # Concurrency
 
