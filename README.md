@@ -20,6 +20,8 @@ Thanks to Golang Team and AnthonyGG for let me learn this awesome language, all 
   - [Choosing a value or pointer receiver](#choosing-a-value-or-pointer-receiver)
   - [Interfaces](#interfaces)
   - [Interfaces are implemented implicitly](#interfaces-are-implemented-implicitly)
+  - [Interface values](#interface-value)
+  - [Interface values with nil underlying values](#interface-values-with-nil-underlying-values)
 - [Concurrency](#concurrency)
   - [Range and Close](#range-and-close)
   - [Select](#select)
@@ -158,6 +160,8 @@ A type implements an interface by implementing its methods. There is no explicit
 
 Implicit interfaces decouple the definition of an interface from its implementation, which could then appear in any package without prearrangement.
 
+[Code Example](15-methods-and-interfaces/10-interfaces-are-implemented-implicitly/main.go)
+
 ## Interface values
 
 Under the hood, interface values can be thought of as a tuple of a value and a concrete type:
@@ -170,6 +174,8 @@ An interface value holds a value of a specific underlying concrete type.
 
 Calling a method on an interface value executes the method of the same name on its underlying type.
 
+[Code Example](15-methods-and-interfaces/11-interface-values/main.go)
+
 ## Interface value with nil underlying values
 
 If the concrete value inside the interface itself is nil, the method will be called with a nil receiver.
@@ -177,6 +183,8 @@ If the concrete value inside the interface itself is nil, the method will be cal
 In some languages this would trigger a null pointer exception, but in Go it is common to write methods that gracefully handle being called with a nil receiver (as with the method `M` in this example.)
 
 Note that an interface value that holds a nil concrete value is itself non-nil.
+
+[Code Example](15-methods-and-interfaces/12-interface-values-with-nil-underlying-values/main.go)
 
 # Concurrency
 
