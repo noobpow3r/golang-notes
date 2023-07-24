@@ -19,6 +19,7 @@ Thanks to Golang Team and AnthonyGG for let me learn this awesome language, all 
   - [Methods and pointer indirection 2](#methods-and-pointer-indirection-2)
   - [Choosing a value or pointer receiver](#choosing-a-value-or-pointer-receiver)
   - [Interfaces](#interfaces)
+  - [Interfaces are implemented implicitly](#interfaces-are-implemented-implicitly)
 - [Concurrency](#concurrency)
   - [Range and Close](#range-and-close)
   - [Select](#select)
@@ -150,6 +151,12 @@ A value of interface type can hold any value that implements those methods.
 **Note:** There is an error in the example code on line 23. `Vertex` (the value type) doesn't implement `Abser` because the `Abs` method is defined only on `*Vertex` (the pointer type).
 
 [Code Example](15-methods-and-interfaces/09-interfaces/main.go)
+
+## Interfaces are implemented implicitly
+
+A type implements an interface by implementing its methods. There is no explicit declaration of intent, no "implements" keyword.
+
+Implicit interfaces decouple the definition of an interface from its implementation, which could then appear in any package without prearrangement.
 
 # Concurrency
 
