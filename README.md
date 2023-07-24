@@ -158,6 +158,18 @@ A type implements an interface by implementing its methods. There is no explicit
 
 Implicit interfaces decouple the definition of an interface from its implementation, which could then appear in any package without prearrangement.
 
+## Interface values
+
+Under the hood, interface values can be thought of as a tuple of a value and a concrete type:
+
+```go
+(value, type)
+```
+
+An interface value holds a value of a specific underlying concrete type.
+
+Calling a method on an interface value executes the method of the same name on its underlying type.
+
 # Concurrency
 
 ## Range and Close
