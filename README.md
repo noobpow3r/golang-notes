@@ -1,11 +1,11 @@
 # Golang Notes
 
-This notes come from 2 courses:
+This notes come from this resources:
 
 - [A Tour of Go](https://go.dev/tour)
 - [Fulltimegodev](https://fulltimegodev.com/)
 
-Thanks to Golang Team and AnthonyGG for let me learn this awesome language, all credits for them.
+Thanks for let me learn this awesome language, all credits for them.
 
 # Table of Contents
 
@@ -44,11 +44,15 @@ In this example, the `Abs` method has a receiver of type `Vertex` named `v`.
 
 [Code Example](15-methods-and-interfaces/01-methods/main.go)
 
+**[⬆ back to top](#table-of-contents)**
+
 ## Methods are functions
 
 A method is just a function with a receiver argument.
 
 Here's `Abs` written as a regular function with no change in functionality.
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Methods continued
 
@@ -59,6 +63,8 @@ In this example we see a numeric type `MyFloat` with an `Abs` method.
 You can only declare a method with a receiver whose type is defined in the same package as the method. You cannot declare a method with a receiver whose type is defined in another package (which includes the built-in types such as `int`).
 
 [Code Example](15-methods-and-interfaces/03-methods-continued/main.go)
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Pointer receivers
 
