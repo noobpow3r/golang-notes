@@ -22,6 +22,8 @@ Thanks to Golang Team and AnthonyGG for let me learn this awesome language, all 
   - [Interfaces are implemented implicitly](#interfaces-are-implemented-implicitly)
   - [Interface values](#interface-value)
   - [Interface values with nil underlying values](#interface-values-with-nil-underlying-values)
+  - [Nil interface values](#nil-interface-values)
+  - [The empty interface](#the-empty-interface)
 - [Concurrency](#concurrency)
   - [Range and Close](#range-and-close)
   - [Select](#select)
@@ -185,6 +187,28 @@ In some languages this would trigger a null pointer exception, but in Go it is c
 Note that an interface value that holds a nil concrete value is itself non-nil.
 
 [Code Example](15-methods-and-interfaces/12-interface-values-with-nil-underlying-values/main.go)
+
+## Nil interface values
+
+A nil interface value holds neither value nor concrete type.
+
+Calling a method on a nil interface is a run-time error because there is no type inside the interface tuple to indicate which concrete method to call.
+
+[Code Example](15-methods-and-interfaces/13-nil-interface-values/main.go)
+
+## The empty interface
+
+The interface type that specifies zero methods is known as the `empty interface`:
+
+```go
+interface{}
+```
+
+An empty interface may hold values of any type. (Every type implements at least zero methods.)
+
+Empty interfaces are used by code that handles values of unknown type. For example, `fmt.Print` takes any number of arguments of type `interface{}`.
+
+[Code Example](15-methods-and-interfaces/14-the-empty-interface/main.go)
 
 # Concurrency
 
