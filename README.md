@@ -82,6 +82,8 @@ With a value receiver, the `Scale` method operates on a copy of the original `Ve
 
 [Code Example](15-methods-and-interfaces/04-pointer-receivers/main.go)
 
+**[⬆ back to top](#table-of-contents)**
+
 ## Pointers and functions
 
 Here we see the `Abs` and `Scale` methods rewritten as functions.
@@ -89,6 +91,8 @@ Here we see the `Abs` and `Scale` methods rewritten as functions.
 Again, try removing the `*` from line 16. Can you see why the behavior changes? What else did you need to change for the example to compile?
 
 [Code Example](15-methods-and-interfaces/05-pointers-and-functions/main.go)
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Methods and pointer indirection
 
@@ -112,6 +116,8 @@ p.Scale(10) // OK
 For the statement `v.Scale(5)`, even though `v` is a value and not a pointer, the method with the pointer receiver is called automatically. That is, as a convenience, Go interprets the statement `v.Scale(5)` as `(&v).Scale(5)` since the `Scale` method has a pointer receiver.
 
 [Code Example](15-methods-and-interfaces/06-methods-and-pointer-indirection/main.go)
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Methods and pointer indirection 2
 
@@ -138,6 +144,8 @@ In this case, the method call `p.Abs()` is interpreted as `(*p).Abs()`
 
 [Code Example](15-methods-and-interfaces/07-methods-and-pointer-indirection-2/main.go)
 
+**[⬆ back to top](#table-of-contents)**
+
 ## Choosing a value or pointer receiver
 
 There are two reasons to use a pointer receiver.
@@ -152,6 +160,8 @@ In general, all methods on a given type should have either value or pointer rece
 
 [Code Example](15-methods-and-interfaces/08-choosing-a-value-or-pointer-receiver/main.go)
 
+**[⬆ back to top](#table-of-contents)**
+
 ## Interfaces
 
 An interface type is defined as a set of method signatures.
@@ -162,6 +172,8 @@ A value of interface type can hold any value that implements those methods.
 
 [Code Example](15-methods-and-interfaces/09-interfaces/main.go)
 
+**[⬆ back to top](#table-of-contents)**
+
 ## Interfaces are implemented implicitly
 
 A type implements an interface by implementing its methods. There is no explicit declaration of intent, no "implements" keyword.
@@ -169,6 +181,8 @@ A type implements an interface by implementing its methods. There is no explicit
 Implicit interfaces decouple the definition of an interface from its implementation, which could then appear in any package without prearrangement.
 
 [Code Example](15-methods-and-interfaces/10-interfaces-are-implemented-implicitly/main.go)
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Interface values
 
@@ -184,6 +198,8 @@ Calling a method on an interface value executes the method of the same name on i
 
 [Code Example](15-methods-and-interfaces/11-interface-values/main.go)
 
+**[⬆ back to top](#table-of-contents)**
+
 ## Interface value with nil underlying values
 
 If the concrete value inside the interface itself is nil, the method will be called with a nil receiver.
@@ -194,6 +210,8 @@ Note that an interface value that holds a nil concrete value is itself non-nil.
 
 [Code Example](15-methods-and-interfaces/12-interface-values-with-nil-underlying-values/main.go)
 
+**[⬆ back to top](#table-of-contents)**
+
 ## Nil interface values
 
 A nil interface value holds neither value nor concrete type.
@@ -201,6 +219,8 @@ A nil interface value holds neither value nor concrete type.
 Calling a method on a nil interface is a run-time error because there is no type inside the interface tuple to indicate which concrete method to call.
 
 [Code Example](15-methods-and-interfaces/13-nil-interface-values/main.go)
+
+**[⬆ back to top](#table-of-contents)**
 
 ## The empty interface
 
@@ -215,6 +235,8 @@ An empty interface may hold values of any type. (Every type implements at least 
 Empty interfaces are used by code that handles values of unknown type. For example, `fmt.Print` takes any number of arguments of type `interface{}`.
 
 [Code Example](15-methods-and-interfaces/14-the-empty-interface/main.go)
+
+**[⬆ back to top](#table-of-contents)**
 
 # Concurrency
 
@@ -234,6 +256,8 @@ Channels aren't like files; you don't usually need to close them. Closing is onl
 
 [Code Example](14-concurrency/04-range-and-close/main.go)
 
+**[⬆ back to top](#table-of-contents)**
+
 ## Select
 
 The `select` statement lets a goroutine wait on multiple communication operations.
@@ -241,6 +265,8 @@ The `select` statement lets a goroutine wait on multiple communication operation
 A `select` blocks until one of its cases can run, the it executes that case. It chooses one at random if multiple are ready.
 
 [Code Example](14-concurrency/05-select/main.go)
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Default Selection
 
@@ -258,6 +284,8 @@ default:
 ```
 
 [Code Example](14-concurrency/06-default-selection/main.go)
+
+**[⬆ back to top](#table-of-contents)**
 
 ## sync Mutex
 
@@ -277,3 +305,5 @@ We can define a block of code to be executed in mutual exclusion by surrounding 
 We can also use `defer` to ensure the mutex will be unlocked as in the `Value` method.
 
 [Code Example](14-concurrency/07-sync-mutex/main.go)
+
+**[⬆ back to top](#table-of-contents)**
