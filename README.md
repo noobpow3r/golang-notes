@@ -242,7 +242,7 @@ Empty interfaces are used by code that handles values of unknown type. For examp
 
 ## Type assertions
 
-A _type assertion_ provides access to an interface value's underlying concrete value.
+A *type assertion* provides access to an interface value's underlying concrete value.
 
 ```go
 t := i.(T)
