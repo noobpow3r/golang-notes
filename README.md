@@ -248,7 +248,6 @@ A _type assertion_ provides access to an interface value's underlying concrete v
 t := i.(T)
 ```
 
-**[⬆ back to top](#table-of-contents)**
 This statement asserts that the interface value `i` holds the concrete type `T` and assigns the underlying `T` value to the variable `t`.
 
 If `i` does not hold a `T`, the statement will trigger a panic.
@@ -259,14 +258,12 @@ To _test_ whether an interface value holds a specific type, a type assertion can
 t, ok := i.(T)
 ```
 
-**[⬆ back to top](#table-of-contents)**
 If `i` holds a `T`, the `t` will be the underlying value and `ok` will be true.
 
 If not, `ok` will be false and `t` will be the zero value of type `T`, and no panic occurs.
 
 Note the similarity between this syntax and that of reading from a map.
 
-**[⬆ back to top](#table-of-contents)**
 [Code Example](15-methods-and-interfaces/15-type-assertions/main.go)
 
 **[⬆ back to top](#table-of-contents)**
