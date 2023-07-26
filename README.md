@@ -46,7 +46,7 @@ In this example, the `Abs` method has a receiver of type `Vertex` named `v`.
 
 [Code Example](15-methods-and-interfaces/01-methods/main.go)
 
-__[⬆ back to top](#table-of-contents)__
+[⬆ back to top](#table-of-contents)_
 
 ## Methods are functions
 
@@ -56,7 +56,7 @@ Here's `Abs` written as a regular function with no change in functionality.
 
 [Code Example](15-methods-and-interfaces/02-methods-are-functions/main.go)
 
-__[⬆ back to top](#table-of-contents)__
+[⬆ back to top](#table-of-contents)
 
 ## Methods continued
 
@@ -68,7 +68,7 @@ You can only declare a method with a receiver whose type is defined in the same 
 
 [Code Example](15-methods-and-interfaces/03-methods-continued/main.go)
 
-__[⬆ back to top](#table-of-contents)__
+[⬆ back to top](#table-of-contents)
 
 ## Pointer receivers
 
@@ -86,7 +86,7 @@ With a value receiver, the `Scale` method operates on a copy of the original `Ve
 
 [Code Example](15-methods-and-interfaces/04-pointer-receivers/main.go)
 
-__[⬆ back to top](#table-of-contents)__
+[⬆ back to top](#table-of-contents)
 
 ## Pointers and functions
 
@@ -96,7 +96,7 @@ Again, try removing the `*` from line 16. Can you see why the behavior changes? 
 
 [Code Example](15-methods-and-interfaces/05-pointers-and-functions/main.go)
 
-__[⬆ back to top](#table-of-contents)__
+[⬆ back to top](#table-of-contents)
 
 ## Methods and pointer indirection
 
