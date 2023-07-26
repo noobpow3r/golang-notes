@@ -38,7 +38,7 @@ Thanks for let me learn this awesome language, all credits for them.
 
 Go does not have classes. However, you can define methods on types.
 
-A method is function with a special _receiver_ argument.
+A method is function with a special receiver argument.
 
 The receiver appears in its own argument list between the `func` keyword and the method name.
 
@@ -270,7 +270,7 @@ Note the similarity between this syntax and that of reading from a map.
 
 ## Type switches
 
-A _type switch_ is a construct that permits several type assertions in series.
+A type switch is a construct that permits several type assertions in series.
 
 A type switch is like a regular switch statement, but the cases in a type switch specify types (not values), and those values are compared against the type of the value held by the given interface value.
 
@@ -348,7 +348,7 @@ We've seen how channels are great for communication among goroutines.
 
 But what if we don't need communication? What if we just want to make sure only one goroutine can access a variable at a time to avoid conflicts?
 
-This concept is called _mutual exclusion_, and the conventional name for the data structure that provides it is _mutex_.
+This concept is called `mutual exclusion`, and the conventional name for the data structure that provides it is `mutex`.
 
 Go' standard library provides mutual exclusion with `sync.Mutex` and its two methods:
 
