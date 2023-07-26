@@ -56,7 +56,7 @@ Here's `Abs` written as a regular function with no change in functionality.
 
 [Code Example](15-methods-and-interfaces/02-methods-are-functions/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
 
 ## Methods continued
 
@@ -68,7 +68,7 @@ You can only declare a method with a receiver whose type is defined in the same 
 
 [Code Example](15-methods-and-interfaces/03-methods-continued/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
 
 ## Pointer receivers
 
@@ -86,7 +86,7 @@ With a value receiver, the `Scale` method operates on a copy of the original `Ve
 
 [Code Example](15-methods-and-interfaces/04-pointer-receivers/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
 
 ## Pointers and functions
 
@@ -96,7 +96,7 @@ Again, try removing the `*` from line 16. Can you see why the behavior changes? 
 
 [Code Example](15-methods-and-interfaces/05-pointers-and-functions/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
 
 ## Methods and pointer indirection
 
@@ -121,7 +121,7 @@ For the statement `v.Scale(5)`, even though `v` is a value and not a pointer, th
 
 [Code Example](15-methods-and-interfaces/06-methods-and-pointer-indirection/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
 
 ## Methods and pointer indirection 2
 
@@ -148,7 +148,7 @@ In this case, the method call `p.Abs()` is interpreted as `(*p).Abs()`
 
 [Code Example](15-methods-and-interfaces/07-methods-and-pointer-indirection-2/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
 
 ## Choosing a value or pointer receiver
 
@@ -164,7 +164,7 @@ In general, all methods on a given type should have either value or pointer rece
 
 [Code Example](15-methods-and-interfaces/08-choosing-a-value-or-pointer-receiver/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
 
 ## Interfaces
 
@@ -176,7 +176,7 @@ A value of interface type can hold any value that implements those methods.
 
 [Code Example](15-methods-and-interfaces/09-interfaces/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
 
 ## Interfaces are implemented implicitly
 
@@ -186,7 +186,7 @@ Implicit interfaces decouple the definition of an interface from its implementat
 
 [Code Example](15-methods-and-interfaces/10-interfaces-are-implemented-implicitly/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
 
 ## Interface values
 
@@ -202,7 +202,7 @@ Calling a method on an interface value executes the method of the same name on i
 
 [Code Example](15-methods-and-interfaces/11-interface-values/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
 
 ## Interface value with nil underlying values
 
@@ -214,7 +214,7 @@ Note that an interface value that holds a nil concrete value is itself non-nil.
 
 [Code Example](15-methods-and-interfaces/12-interface-values-with-nil-underlying-values/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
 
 ## Nil interface values
 
@@ -224,7 +224,7 @@ Calling a method on a nil interface is a run-time error because there is no type
 
 [Code Example](15-methods-and-interfaces/13-nil-interface-values/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
 
 ## The empty interface
 
@@ -240,7 +240,7 @@ Empty interfaces are used by code that handles values of unknown type. For examp
 
 [Code Example](15-methods-and-interfaces/14-the-empty-interface/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
 
 ## Type assertions
 
@@ -268,7 +268,7 @@ Note the similarity between this syntax and that of reading from a map.
 
 [Code Example](15-methods-and-interfaces/15-type-assertions/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
 
 ## Type switches
 
@@ -293,7 +293,7 @@ This switch statement tests whether the interface value `i` holds a value of typ
 
 [Code Example](15-methods-and-interfaces/16-type-switches/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
 
 # Concurrency
 
@@ -313,7 +313,7 @@ Channels aren't like files; you don't usually need to close them. Closing is onl
 
 [Code Example](14-concurrency/04-range-and-close/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
 
 ## Select
 
@@ -323,7 +323,7 @@ A `select` blocks until one of its cases can run, the it executes that case. It 
 
 [Code Example](14-concurrency/05-select/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
 
 ## Default Selection
 
@@ -342,7 +342,7 @@ default:
 
 [Code Example](14-concurrency/06-default-selection/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
 
 ## sync Mutex
 
@@ -363,4 +363,4 @@ We can also use `defer` to ensure the mutex will be unlocked as in the `Value` m
 
 [Code Example](14-concurrency/07-sync-mutex/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
