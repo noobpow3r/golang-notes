@@ -242,7 +242,7 @@ Empty interfaces are used by code that handles values of unknown type. For examp
 
 ## Type assertions
 
-A _type assertion_ provides access to an interface value's underlying concrete value.
+A type assertion provides access to an interface value's underlying concrete value.
 
 ```go
 t := i.(T)
@@ -252,7 +252,7 @@ This statement asserts that the interface value `i` holds the concrete type `T` 
 
 If `i` does not hold a `T`, the statement will trigger a panic.
 
-To _test_ whether an interface value holds a specific type, a type assertion can return two values: the underlying value and a boolean value that reports whether the assertion succeeded.
+To test whether an interface value holds a specific type, a type assertion can return two values: the underlying value and a boolean value that reports whether the assertion succeeded.
 
 ```go
 t, ok := i.(T)
