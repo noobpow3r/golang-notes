@@ -54,6 +54,10 @@ A method is just a function with a receiver argument.
 
 Here's `Abs` written as a regular function with no change in functionality.
 
+[Code Example](15-methods-and-interfaces/02-methods-are-functions/main.go)
+
+**[⬆ back to top](#table-of-contents)**
+
 ## Methods continued
 
 You can declare a method on non-struct types, too.
