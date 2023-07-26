@@ -266,8 +266,6 @@ Note the similarity between this syntax and that of reading from a map.
 
 [Code Example](15-methods-and-interfaces/15-type-assertions/main.go)
 
-**[⬆ back to top](#table-of-contents)**
-
 ## Type switches
 
 A _type switch_ is a construct that permits several type assertions in series.
