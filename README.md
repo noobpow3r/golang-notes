@@ -68,6 +68,8 @@ You can only declare a method with a receiver whose type is defined in the same 
 
 [Code Example](15-methods-and-interfaces/03-methods-continued/main.go)
 
+__[⬆ back to top](#table-of-contents)__
+
 ## Pointer receivers
 
 You can declare methods with pointer receivers.
@@ -84,6 +86,8 @@ With a value receiver, the `Scale` method operates on a copy of the original `Ve
 
 [Code Example](15-methods-and-interfaces/04-pointer-receivers/main.go)
 
+__[⬆ back to top](#table-of-contents)__
+
 ## Pointers and functions
 
 Here we see the `Abs` and `Scale` methods rewritten as functions.
@@ -91,6 +95,8 @@ Here we see the `Abs` and `Scale` methods rewritten as functions.
 Again, try removing the `*` from line 16. Can you see why the behavior changes? What else did you need to change for the example to compile?
 
 [Code Example](15-methods-and-interfaces/05-pointers-and-functions/main.go)
+
+__[⬆ back to top](#table-of-contents)__
 
 ## Methods and pointer indirection
 
