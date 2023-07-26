@@ -46,7 +46,7 @@ In this example, the `Abs` method has a receiver of type `Vertex` named `v`.
 
 [Code Example](15-methods-and-interfaces/01-methods/main.go)
 
-**[back to top](#table-of-contents)**
+⬆️ **[back to top](#table-of-contents)**
 
 ## Methods are functions
 
