@@ -26,6 +26,7 @@ Thanks for let me learn this awesome language, all credits for them.
   - [The empty interface](#the-empty-interface)
   - [Type assertions](#type-assertions)
   - [Type switches](#type-switches)
+  - [Stringers](#stringers)
 - [Concurrency](#concurrency)
   - [Range and Close](#range-and-close)
   - [Select](#select)
@@ -292,6 +293,22 @@ The declaration in a type switch has the same syntax as a type assertion i.(T), 
 This switch statement tests whether the interface value `i` holds a value of type `T` or `S`. In each of the `T` and `S` cases, the variable `v` will be of type `T` or `S` respectively and hold the value held by `i`. In the default case (where there is no match), the variable `v` is of the same interface type and value as `i`.
 
 [Code Example](15-methods-and-interfaces/16-type-switches/main.go)
+
+⬆️ **[back to top](#table-of-contents)**
+
+## Stringers
+
+One of the most ubiquitous interfaces is `Stringer` defined by the `fmt` package.
+
+```go
+type Stringer interface {
+    String() string
+}
+```
+
+A `Stringer` is a type that can describe itself as a string. The `fmt` package (and many others) look for this interface to print values.
+
+[Code Example](15-methods-and-interfaces/17-stringers/main.go)
 
 ⬆️ **[back to top](#table-of-contents)**
 
