@@ -27,6 +27,8 @@ Thanks for let me learn this awesome language, all credits for them.
   - [Type assertions](#type-assertions)
   - [Type switches](#type-switches)
   - [Stringers](#stringers)
+  - [Errors](#errors)
+  - [Readers](#readers)
 - [Concurrency](#concurrency)
   - [Range and Close](#range-and-close)
   - [Select](#select)
@@ -341,6 +343,8 @@ A nil `error` denotes success; a non-nil `error` denotes failure.
 
 [Code Example](15-methods-and-interfaces/18-errors/main.go)
 
+⬆️ **[back to top](#table-of-contents)**
+
 ## Readers
 
 The `io` package specifies the `io.Reader` interface, which represents the read end of a stream of data.
@@ -358,6 +362,8 @@ func (T) Read(b []byte) (n int, err error)
 The example code creates a `strings.Reader` and consumes its output 8 bytes at a time.
 
 [Code Example](15-methods-and-interfaces/19-readers/main.go)
+
+⬆️ **[back to top](#table-of-contents)**
 
 # Concurrency
 
