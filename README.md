@@ -3,6 +3,7 @@
 This notes come from this resources:
 
 - [A Tour of Go](https://go.dev/tour)
+- [Ultimate Go Tour](https://tour.ardanlabs.com/)
 - [Fulltimegodev](https://fulltimegodev.com/)
 
 Thanks for let me learn this awesome language, all credits for them.
