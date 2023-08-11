@@ -9,10 +9,39 @@ func main() {
 	var c float64
 	var d bool
 
-	fmt.Println("Variables set to their Zero Value")
+	fmt.Printf("Variables set to their Zero Value\n")
 	fmt.Printf("var a int \t %T [%v]\n", a, a)
 	fmt.Printf("var b string \t %T [%v]\n", b, b)
 	fmt.Printf("var c float64 \t %T [%v]\n", c, c)
 	fmt.Printf("var d bool \t %T [%v]\n", d, d)
 
+	// Declare variables and initialize.
+	// Using the short variable declaration  operator.
+	aa := 10
+	bb := "hello"
+	cc := 3.14159
+	dd := true
+
+	fmt.Printf("Declare variable and initialize\n")
+	fmt.Printf("aa := 10 \t %T [%v]\n", aa, aa)
+	fmt.Printf("bb := \"hello\" \t %T [%v]\n", bb, bb)
+	fmt.Printf("cc := 3.14159 \t %T [%v]\n", cc, cc)
+	fmt.Printf("dd := true \t %T [%v]\n", dd, dd)
+
+	// Specify type and perform a conversion.
+	fmt.Printf("Specify type and perform a conversion\n")
+	aaa := int32(10)
+	fmt.Printf("aaa := int32(10) %T [%v]\n", aaa, aaa)
+
 }
+
+/*
+  Zero Values:
+  Type Initialized Value
+  Boolean false
+  Integer 0
+  Floating Point 0
+  Complex 0i
+  String "" (empty string)
+  Pointer nil
+*/
