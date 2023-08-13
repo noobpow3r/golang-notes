@@ -117,7 +117,19 @@ dd := true       bool [true]
 
 ## Conversion vs Casting
 
-Go doesn't have casting, but conversion.
+Go doesn't have casting, but conversion. Instead of telling the compiler to map a set of bytes to a different representation, the bytes need to be copied to a new memory location for the new representation.
+
+```go
+fmt.Printf("Specify type and perform a conversion\n")
+aaa := int32(10)
+fmt.Printf("aaa := int32(10) %T [%v]\n", aaa, aaa)
+
+Output:
+Specify type and perform a conversion
+aaa := int32(10) int32 [10]
+```
+
+Go does have a package in the standard library called unsafe if you need to perform an actual casting operation. You should really avoid that and be honest with yourself why you are considering using it. Performing a conversion provides the highest level of integrity for these types of operations.
 
 [Code Example](01-basics/01-variables/variables.go)
 
