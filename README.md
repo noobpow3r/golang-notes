@@ -36,6 +36,93 @@ Thanks for let me learn this awesome language, all credits for them.
   - [Default Selection](#default-selection)
   - [sync Mutex](#sync-mutex)
 
+# Variables
+
+## Zero Value Concept
+
+Every single value you construct in Go is initialized at least to its zero value state unless you specify the initialization value at construction. The zero value is the setting of every bit in every byte to zero.
+
+This is done for data integrity and it's not free. It takes time to push electrons through the machine to reset those bits, but you should always take integrity over performance.
+
+```go
+Zero Values:
+Type Initialized Value
+Boolean false
+Integer 0
+Floating Point 0
+Complex 0i
+String "" (empty string)
+Pointer nil
+```
+
+## Declare and Initialize
+
+The keyword var can be used to construct values to their zero value state for all types.
+
+```go
+var a int
+var b string
+var c float64
+var d bool
+
+fmt.Printf("Variables set to their Zero Value\n")
+fmt.Printf("var a int \t %T [%v]\n", a, a)
+fmt.Printf("var b string \t %T [%v]\n", b, b)
+fmt.Printf("var c float64 \t %T [%v]\n", c, c)
+fmt.Printf("var d bool \t %T [%v]\n", d, d)
+```
+
+Output:
+
+```go
+Variables set to their Zero Value
+var a int        int [0]
+var b string     string []
+var c float64    float64 [0]
+var d bool       bool [false]
+```
+
+Strings use the UTF8 character set, but are really just a collection of bytes.
+
+A string is a two-word internal data structure in Go:
+
+- The first word represents a pointer to a backing array of bytes
+- The second word represents the length or the number of bytes in the backing array
+- If the string is set to its zero value state, the the first word is nil and the second word is 0
+
+Using the short variable declaration operator, you can declare, construct, and initialize a value all at the same time.
+
+```go
+aa := 10
+bb := "hello"
+cc := 3.14159
+dd := true
+
+fmt.Printf("Declare variable and initialize\n")
+fmt.Printf("aa := 10 \t %T [%v]\n", aa, aa)
+fmt.Printf("bb := \"hello\" \t %T [%v]\n", bb, bb)
+fmt.Printf("cc := 3.14159 \t %T [%v]\n", cc, cc)
+fmt.Printf("dd := true \t %T [%v]\n", dd, dd)
+```
+
+Output:
+
+```go
+Declare variable and initialize
+aa := 10         int [10]
+bb := "hello"    string [hello]
+cc := 3.14159    float64 [3.14159]
+dd := true       bool [true]
+```
+
+## Conversion vs Casting
+
+Go doesn't have casting, but conversion.
+
+[Code Example](01-basics/01-variables/variables.go)
+
+⬆️ **[back to top](#table-of-contents)**
+
 # Methods and Interfaces
 
 ## Methods
