@@ -10,6 +10,8 @@ Thanks for let me learn this awesome language, all credits for them.
 
 # Table of Contents
 
+- [Basics](#basics)
+  - [Variables](#variables)
 - [Methods and Interfaces](#methods-and-interfaces)
   - [Methods](#methods)
   - [Methods are functions](#methods-are-functions)
@@ -36,9 +38,11 @@ Thanks for let me learn this awesome language, all credits for them.
   - [Default Selection](#default-selection)
   - [sync Mutex](#sync-mutex)
 
-# Variables
+# Basics
 
-## Zero Value Concept
+## Variables
+
+### Zero Value Concept
 
 Every single value you construct in Go is initialized at least to its zero value state unless you specify the initialization value at construction. The zero value is the setting of every bit in every byte to zero.
 
@@ -55,7 +59,7 @@ String "" (empty string)
 Pointer nil
 ```
 
-## Declare and Initialize
+### Declare and Initialize
 
 The keyword var can be used to construct values to their zero value state for all types.
 
@@ -115,7 +119,7 @@ cc := 3.14159    float64 [3.14159]
 dd := true       bool [true]
 ```
 
-## Conversion vs Casting
+### Conversion vs Casting
 
 Go doesn't have casting, but conversion. Instead of telling the compiler to map a set of bytes to a different representation, the bytes need to be copied to a new memory location for the new representation.
 
@@ -130,6 +134,16 @@ aaa := int32(10) int32 [10]
 ```
 
 Go does have a package in the standard library called unsafe if you need to perform an actual casting operation. You should really avoid that and be honest with yourself why you are considering using it. Performing a conversion provides the highest level of integrity for these types of operations.
+
+### Notes
+
+- The purpose of all programs and all parts of those programs is to transform data from one form to the other.
+- Code primarily allocates, reads and writes to memory.
+- Understanding type is crucial to writing good code and understanding code.
+- If you don't understand the data, you don't understand the problem.
+- You understand the problem better by understanding the data.
+- When variables are being declared to their zero value, use the keyword var.
+- When variables are being declared and initialized, use the short variable declaration operator.
 
 [Code Example](01-basics/01-variables/variables.go)
 
