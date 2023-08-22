@@ -12,6 +12,7 @@ Thanks for let me learn this awesome language, all credits for them.
 
 - [Basics](#basics)
   - [Variables](#variables)
+  - [Pointers](#pointers)
 - [Methods and Interfaces](#methods-and-interfaces)
   - [Methods](#methods)
   - [Methods are functions](#methods-are-functions)
@@ -70,6 +71,8 @@ count:  Value Of[ 11 ]  Addr Of[ 0xc000050718 ]
 - Values in Go are always pass by value.
 - "Value of", what's in the box. "Address of" (&), where is the box.
 - The (\*) operator declares a pointer variable and the "Value that the pointer points to".
+
+⬆️ **[back to top](#table-of-contents)**
 
 ## Variables
 
