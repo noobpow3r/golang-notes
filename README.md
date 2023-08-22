@@ -41,39 +41,6 @@ Thanks for let me learn this awesome language, all credits for them.
 
 # Basics
 
-## Pointers
-
-Pointers serve the purpose of sharing values across program boundaries. There are several types of program boundaries. The most common one is between function calls. There is also a boundary between Goroutines which you have notes for later.
-
-When a Go program starts up, the Go runtime creates a Goroutine. Goroutines are lightweight application level threads with many of the same semantics as operating system threads. Their job is to manage the physical execution of a distinct set of instructions. Every Go program has at least 1 Goroutine that you call the main Goroutine.
-
-Each Goroutine is given its own block of memory called a stack. Each stack starts out as a 2048 byte (2k) allocation. It’s very small, but stacks can grow in size over time.
-
-### Pass By Value
-
-All data is moved around the program by value. This means as data is being passed across program boundaries, each function or Goroutine is given its own copy of the data. There are two types of data you will work with, the value itself (int, string, user) or the value's address. Addresses are data that need to be copied and stored across program boundaries.
-
-The [following code](01-basics/04-pointers/pass-by-value.go) attempts to explain this more.
-
-Output:
-
-```shell
-count:  Value Of[ 10 ]  Addr Of[ 0xc000050718 ]
-inc1:   Value Of[ 11 ]  Addr Of[ 0xc000050710 ]
-count:  Value Of[ 10 ]  Addr Of[ 0xc000050718 ]
-inc2:   Value Of[ 0xc000050718 ]        Addr Of[ 0xc000050728 ] Points To[ 11 ]
-count:  Value Of[ 11 ]  Addr Of[ 0xc000050718 ]
-```
-
-### Notes
-
-- Use pointers to share data.
-- Values in Go are always pass by value.
-- "Value of", what's in the box. "Address of" (&), where is the box.
-- The (\*) operator declares a pointer variable and the "Value that the pointer points to".
-
-⬆️ **[back to top](#table-of-contents)**
-
 ## Variables
 
 ### Zero Value Concept
@@ -180,6 +147,39 @@ Go does have a package in the standard library called unsafe if you need to perf
 - When variables are being declared and initialized, use the short variable declaration operator.
 
 [Code Example](01-basics/01-variables/variables.go)
+
+⬆️ **[back to top](#table-of-contents)**
+
+## Pointers
+
+Pointers serve the purpose of sharing values across program boundaries. There are several types of program boundaries. The most common one is between function calls. There is also a boundary between Goroutines which you have notes for later.
+
+When a Go program starts up, the Go runtime creates a Goroutine. Goroutines are lightweight application level threads with many of the same semantics as operating system threads. Their job is to manage the physical execution of a distinct set of instructions. Every Go program has at least 1 Goroutine that you call the main Goroutine.
+
+Each Goroutine is given its own block of memory called a stack. Each stack starts out as a 2048 byte (2k) allocation. It’s very small, but stacks can grow in size over time.
+
+### Pass By Value
+
+All data is moved around the program by value. This means as data is being passed across program boundaries, each function or Goroutine is given its own copy of the data. There are two types of data you will work with, the value itself (int, string, user) or the value's address. Addresses are data that need to be copied and stored across program boundaries.
+
+The [following code](01-basics/04-pointers/pass-by-value.go) attempts to explain this more.
+
+Output:
+
+```shell
+count:  Value Of[ 10 ]  Addr Of[ 0xc000050718 ]
+inc1:   Value Of[ 11 ]  Addr Of[ 0xc000050710 ]
+count:  Value Of[ 10 ]  Addr Of[ 0xc000050718 ]
+inc2:   Value Of[ 0xc000050718 ]        Addr Of[ 0xc000050728 ] Points To[ 11 ]
+count:  Value Of[ 11 ]  Addr Of[ 0xc000050718 ]
+```
+
+### Notes
+
+- Use pointers to share data.
+- Values in Go are always pass by value.
+- "Value of", what's in the box. "Address of" (&), where is the box.
+- The (\*) operator declares a pointer variable and the "Value that the pointer points to".
 
 ⬆️ **[back to top](#table-of-contents)**
 
